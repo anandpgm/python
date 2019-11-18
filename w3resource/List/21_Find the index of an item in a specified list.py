@@ -1,6 +1,6 @@
 #Find the index of an item in a specified list
 
-a = [2,5,25,1]
+a = [2,34,25,1]
 check = 25
 for i, j in enumerate(a):
     if j == check:
