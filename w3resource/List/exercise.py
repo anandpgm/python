@@ -1,14 +1,10 @@
-def is_leap(year):
-    leap = False
-
-    if (year % 4) == 0:
-        if  (year % 100) == 0:
-            if (year % 400) == 0:
-                leap = True
-
-
-    return leap
-
-
-year = int(input('Enter the year: '))
-print(is_leap(year))
+a = ['abc', 'xyz', 'aba', '1221']
+count = 0
+for i in a:
+    limit = len(i) - 1
+    #print(limit)
+    #print(i[:1])
+    #print(i[limit:])
+    if i[:1] == i[limit:]:
+        count = count +1
+print(count)
