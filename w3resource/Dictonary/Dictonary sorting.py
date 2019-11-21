@@ -1,10 +1,10 @@
+#Python program to sort (ascending and descending) a dictionary by value.
+
 import operator
-
-prices = {'Apple': 1.99, 'Banana': 0.99, 'Orange': 1.49, 'Cantaloupe': 3.99, 'Grapes': 0.39}
-
-sorted_d = sorted(prices.items())
-new =  dict(sorted(prices.items(), key=operator.itemgetter(0)))
-print(sorted_d)
-print(new)
-
+d = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+print('Original dictionary : ',d)
+sorted_d = sorted(d.items(), key=operator.itemgetter(0))
+print('Dictionary in ascending order by value : ',sorted_d)
+sorted_d = dict( sorted(d.items(), key=operator.itemgetter(0),reverse=True))
+print('Dictionary in descending order by value : ',sorted_d)
 
