@@ -1,5 +1,5 @@
 '''
-Program that accept an integer (n) and computes the value of n+nn+nnn
+Program that accept an integer (n) and computes the value of n+nn+nnn....
 '''
 
 num = input('Enter the number: ')
