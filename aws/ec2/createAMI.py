@@ -2,10 +2,10 @@
 
 Description:
 The Script creates AMI and snapshots of the Instances having the followings tags:
-   -->ibm_imi_managed = Yes
+   -->managed = Yes
 
 And tags newly created Amis and snapshots with the following tags:
-   -->ibm_imi_managed = Yes
+   -->managed = Yes
    -->Purpose = Backup Solution for Patching Activity
 
 '''
@@ -35,7 +35,7 @@ def addTagsAMI(amiID,instID):
             'Value': name
         },
         {
-            'Key': 'ibm_imi_managed',
+            'Key': 'managed',
             'Value': 'Yes'
         },
 	{
@@ -74,7 +74,7 @@ def lambda_handler(event, context):
 	amilist=[]
 	reservations = ec2_client.describe_instances(Filters=[
         {
-            'Name': 'tag:ibm_imi_managed',
+            'Name': 'tag:managed',
             'Values': [
                 'Yes',
             ]

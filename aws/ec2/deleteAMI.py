@@ -31,7 +31,7 @@ def lambda_handler(event, context):
 	amiresult = ec2_client.describe_images(
     		Filters=[
        		 {
-          	  'Name': 'tag:ibm_imi_managed',
+          	  'Name': 'tag:managed',
           	  'Values': [
               	   'Yes',
            		 ]

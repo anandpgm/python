@@ -1,5 +1,5 @@
 
-#Python programe to recreate IBM.cam user access key
+#Python programe to recreate cam user access key
 
 import boto3
 filename="/tmp/Iam_Cam.csv"
@@ -16,17 +16,17 @@ for i in range(27,57):
 
 #Getting the access key
 
-	response = iam_client.list_access_keys(UserName='IBM.cam')
+	response = iam_client.list_access_keys(UserName='cam')
     	access_key=(response['AccessKeyMetadata'][0]['AccessKeyId'])
 
 
 # Deleting the access key
 
-	iam_client.delete_access_key(UserName='IBM.cam',AccessKeyId=access_key)
+	iam_client.delete_access_key(UserName='cam',AccessKeyId=access_key)
 
 #Creating the accesskey
 
-	response = iam_client.create_access_key(UserName='IBM.cam')
+	response = iam_client.create_access_key(UserName='cam')
 
 	newaccesskey = response['AccessKey']['AccessKeyId']
 	newsecretkey = response['AccessKey']['SecretAccessKey']
